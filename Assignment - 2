@@ -1,0 +1,152 @@
+Assignment - 2
+
+
+1.What are the two values of the Boolean data type? How do you write them?
+
+   The two value of boolean data type are True and Flase.
+   
+   result = True
+   result = False
+   
+2.What are the three different types of Boolean operators?
+
+   1. AND : This operator returns true only if both the conditions are true else false
+    
+      if x>y and x>z:   x=10,y=2,z=9.  
+         print(x);      // True
+         
+   2. OR  : or operator return true if atleast one condition satisfies
+      
+      if x>y or x>z:
+         print(x)
+         
+       (if x>y is true then it prints x value, if x>y is false and x>z is true then          also it print x)
+       
+    3. NOT : it returns the opposite of a boolean values
+    
+       not(True) -> False
+       not(False) -> True
+       
+       
+3.Make a list of each Boolean operator's truth tables(i.e. every possible combination of Boolean values for the operator and what it evaluate ).
+   
+    AND Truth Table:
+    
+    True and True   => True
+    False and True  => False
+    False and False => False
+    True and False  => False
+
+    OR Truth Table:
+    
+    True or True   => True
+    False or True  => True
+    False or False => False
+    True or False  => True
+    
+    NOT Truth Table:
+    
+    True  => False
+    False => True
+    
+    
+4. What are the values of the following expressions?
+
+    (5 > 4) and (3 == 5)                       -> False
+    not (5 > 4)                                -> False
+    (5 > 4) or (3 == 5)                        -> True
+    not ((5 > 4) or (3 == 5))                  -> False
+    (True and True) and (True == False)        -> False
+    (not False) or (not True)                  -> True
+    
+    
+5.What are the six comparison operators?
+
+  Greater than (>)
+  Less than    (<)
+  Equal to       (==)
+  Not Equals.  (!=)
+  Greater than or equal to  (>=)
+  Less than or equal to     (<=)
+  
+  
+ 6. How do you tell the difference between the equal to and assignment operators?Describe a condition and when you would use one.
+  
+    Assigment operator has only one = where as equal to has 2 == (with no space).
+    
+    x = 3 -> Assignement - assigning 3 to variable x
+    
+    if x == 1 :     -> checks the value of x if it is equals to 1; if yes returns returns true and prints YES.
+       print("YES")
+  
+  
+ 7. Identify the three blocks in this code:
+
+spam = 0
+
+if spam == 10:
+    print('eggs')
+
+if spam > 5:
+    print('bacon')
+else:
+    print('ham')
+
+print('spam')
+print('spam')
+
+
+   Output : ham
+            spam
+            spam
+            
+ 8. Write code that prints Hello if 1 is stored in spam, prints Howdy if 2 is stored in spam, and prints
+Greetings! if anything else is stored in spam.
+
+
+   spam = 10
+   
+   if spam == 1:
+       print("Hello")
+       
+   elif spam == 2:
+       print("Howdy")
+       
+   else:
+       print("Greetings!")
+       
+       
+ 9. If your programme is stuck in an endless loop, what keys you’ll press?
+ 
+     ctrl + c
+     
+     
+10. How can you tell the difference between break and continue?
+   
+   The main differences between break and continue is 
+     Break termatinates the loop and the flow goes after the loop.
+     While continue only skips the current iteration and further the loop continues.
+     
+ 11. In a for loop, what is the difference between range(10), range(0, 10), and range(0, 10, 1)?
+ 
+    All the three range functions produces the same result -> numbers from 0 to 9.
+    But there are some extra params inside the range function, in this case those are the default values for begin = 0 and step increase =1. No need to mention in this case.
+    starts with 0 till (10-1)-> 9 with step as 1, which is i=i+1 every time.
+    
+ 
+12. Write a short program that prints the numbers 1 to 10 using a for loop. Then write an equivalent
+program that prints the numbers 1 to 10 using a while loop.
+
+
+   for i in range(1,11):
+    print(i)
+    
+   i=1
+   while(i<=10):
+       print(i)
+       i = i + 1
+       
+13. If you had a function named bacon() inside a module named spam, how would you call it after importing spam?
+   
+   import spam as sp
+   sp.bacon()
