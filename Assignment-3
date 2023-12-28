@@ -1,0 +1,115 @@
+Assignment - 3
+
+1. Why are functions advantageous to have in your programs?
+
+   A function is a set of instructions that does a specific task which can be called multiple                times,provdies code reusability. Suppose if we have same piece of code that repeats again and again,      we just put it as a function and call wherever we need.
+   We can also pass paramaters to a function in the function call, so it can act dynamically.
+
+
+2. When does the code in a function run: when it's specified or when it's called?
+   
+   The code in a function runs only if we explicitly call it in a program. Creating a function alone has      no use at all. 
+   
+   ex:
+    def sum(a,b):      -> function definition
+        return a+b
+            
+    a=10
+    b=20
+    result = sum(a,b)   -> this is how we call a function
+    print(result)
+    
+    
+3.What statement creates a function?
+
+   In python def keyword is used to define a function.
+   
+   def function_name(params....):
+      
+      
+4. What is the difference between a function and a function call?
+   
+   A function is often called as function definition, it has all the code of that function which is          useless untill we call it.
+   To use a function which has been defined using def keyword, we need to call that particular function      in a program.
+   EX:
+   
+   def firstNnaturalSum(x):
+         return n*(n+1)/2
+         
+   print(firstNnaturalSum(100)) -> this is a funciton call.
+   
+5. How many global scopes are there in a Python program? How many local scopes?
+
+  There is only one global scope for the program, those variables can be accessed throughout the program.
+  Coming to local we can have many local scopes. For examples, for every method call it creates a local     scope.
+
+
+6. What happens to variables in a local scope when the function call returns?
+
+   When a function call is returned it clears the scope of those variables, so we can never access them.
+   
+   
+7. What is the concept of a return value? Is it possible to have a return value in an expression?
+   
+   In a function definition a return statement is responsible to come out of that function with a value      associated with it. As variables inside a function are local (no longer available after function          execution) we return them to the main program where that function is being called.
+   
+   Yes, we can use that returned value in an expression like  x = a + getFunc(); the returned value gets     replaced with the function call in the expression. lets say it returned 10; the expression will be:
+     x = a+10
+     
+8. If a function does not have a return statement, what is the return value of a call to that function?
+    
+    The default return value is None which is a built-in constant meaning null.
+    
+9. How do you make a function variable refer to the global variable?
+   
+   We can access and modify the global variables in the function definition using global keyword.
+   
+   var_glob = 10
+   
+   def myFun():
+      global var_glob
+      var_glob = 1
+
+   myFun()
+       
+   print(var_glob)           -> here we can see updated value 1
+   
+   
+10. What is the data type of None?
+
+    None is type of NoneType, which is a none object meaning null.
+    
+11. What does the sentence import areallyourpetsnamederic do?
+
+    It will result in module not found error. This module doesn't exist.
+    
+    
+12. If you had a bacon() feature in a spam module, what would you call it after importing spam?
+
+    import spam
+    spam.bacon()
+    
+13. What can you do to save a programme from crashing if it encounters an error?
+
+    If a program crashes due to some runtime error at the production it would majorly impact the entire       business. So we have exception handling where can stop the crash by adding this to the places where       we might get runtime exceptions.
+    
+    try,except,else,finally
+    
+14. What is the purpose of the try clause? What is the purpose of the except clause?
+
+    The suspected code should be put under try block which monitors exceptions, if there is an exception     except block will gets executed. And finally executes always irrespective of exception.
+    When there is no exception else block gets executed.
+    
+    try:
+       numerator = 10
+       denominator = 0
+       result = numerator / denominator
+       
+    except ZeroDivisionError as e:
+       print("Error: Division by zero is not allowed")
+       
+    else:
+       print(f"result is {result}")
+       
+    finally:
+       print("This will always be executed.")
