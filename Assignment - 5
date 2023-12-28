@@ -1,0 +1,73 @@
+1. What does an empty dictionary's code look like?
+  
+A. To create an empty dictionary we have 2 options : 
+     i. my_dict = {}
+    ii. my_dic = dict()
+    
+    This creates dictionary with no key value pairs.
+    
+    
+2. What is the value of a dictionary value with the key 'foo' and the value 42?
+
+A. dict1 = {'foo' : 42 }
+
+
+3. What is the most significant distinction between a dictionary and a list?
+
+A. Lists are ordered collection of elements which can be accessed by index, whereas a dictionary is unordered collection of elements which can be accessed by key values.
+
+
+4. What happens if you try to access spam['foo'] if spam is {'bar': 100}?
+
+A. We will get a keyError as we don't have the key 'foo'.
+
+    ---------------------------------------------------------------------------
+    KeyError                                  Traceback (most recent call last)
+    Input In [8], in <cell line: 2>()
+        1 spam =  {'bar': 100}
+   ---> 2 spam['foo']
+
+   KeyError: 'foo'
+
+
+5. If a dictionary is stored in spam, what is the difference between the expressions 
+  'cat' in spam and
+  'cat'in spam.keys()?
+  
+A. They both are used to find whether 'cat' key is present in spam or not. If the key is present it return    true else false.
+   But 'cat'in spam.keys() additionally get all the keys as a list and checks for the key.
+   
+   They both do the same.
+
+
+6. If a dictionary is stored in spam, what is the difference between the expressions 
+  'cat' in spam and
+  'cat'in spam.values()?
+  
+A. 'cat' in spam -> checks if 'cat' key is present or not in spam and returns either true or false,           but'cat'in spam.values() -> checks if the values in the spam has the value 'cat' and returns either       true or flase.
+
+
+7. What is a shortcut for the following code?
+    if'color' not in spam:
+        spam['color'] = 'black'
+        
+A. We have a method setdefault() where we can achieve the same functionality.
+
+   spam.setdefault('color', 'black')
+   
+   If we don't have color key value pair, it will add it to spam.
+   If there already exists a color key with some values, it won't modify the current value.
+   
+   
+8. How do you "pretty print" dictionary values using which module and function?
+
+A. Pretty printing is like fomatting(alphabetical or ascending order) and aligning the dictionary elements    in a uniform structure.
+
+   To pretty print we have to use pprint module and pprint() funtion
+    
+   dict_new = {'z':22,'x' : 32, 'y' :3111}
+   
+   print(dict_new)  # Output  {'z': 22, 'x': 32, 'y': 3111}
+   
+   from pprint import pprint
+   pprint(dict_new) # Output  {'x': 32, 'y': 3111, 'z': 22}
