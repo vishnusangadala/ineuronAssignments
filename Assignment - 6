@@ -1,0 +1,141 @@
+1. What are keywords in python? Using the keyword library, print all the python keywords.
+
+A. In python keywords are the words which have specific meaning and cannot be used as variable name or function name or package or module. These words are like reserved. 
+For example : for, if, else, and, or etc
+
+   To print all keywords :
+   
+      keywords_list = keyword.kwlist
+      print("Python Keywords:")
+      for keyword in keywords_list:
+         print(keyword)
+
+2. What are the rules to create variables in python?
+
+A. i. variable name shouldn't start with a number or a special characters.
+  ii. No space between a variable name
+  iii. We can start name with underscore _ , and also anywhere.
+  iv.  We can't use keywords as a variable name
+  v.  Variable names are case sensitive
+   
+   
+3. What are the standards and conventions followed for the nomenclature of variables in python to improve    code readability and maintainability?
+    
+A. i. We can use meaningful names for variables. Like age instead of x.
+   ii. If we have more than one word we can use underscore in between.
+       Ex: def calculate_sum(a,b):
+       
+   iii. Class name always starts with a capital (class MyClass).
+   iv. Avoid single character name.
+   
+4. What will happen if a keyword is used as a variable name?
+
+A. If a keyword is used as a variable name, we get a syntax error. As these are reserved words we can't      use them as a variable name. 
+
+
+5. For what purpose def keyword is used?
+ 
+A. def keyword is used to define a function in python. A function is a block of code that does a specific    task and can be reused.
+    def calculate_sum(a,b):
+         return a+b
+         
+6.  What is the operation of this special character ‘\’?
+
+A. This is escape sequence character, it means a character following it has a meaning.
+
+   Ex: '\n' - new line    
+       '\t' - tab
+       
+       print("vishnu\nvishnu") 
+       output: vishnu
+               vishnu
+    
+7. Give an example of the following conditions:
+
+A. 
+(i) Homogeneous list : List with elements of same data type.
+      
+      EX: myList = [1,2,3,5]
+          list_1 = ["vishnu","sangadala"]
+    
+
+(ii) Heterogeneous set : A set with elements of different type.
+     
+     EX: heterogeneous_set = {42, 3.14, "Python"}
+
+
+(iii) Homogeneous tuple: A homogeneous tuple contains elements of the same data type.
+
+     EX: homogeneous_tuple = ("apple", "bat", "cat")
+     
+     
+8. Explain the mutable and immutable data types with proper explanation & examples.
+
+A. Mutable Data Types:  Mutable data types allow modifications to the existing object, meaning we can add,     delete and modify the data of current object.
+   In python, lists,dictionaries and sets are mutable.
+   
+   EX: my_list = [1, 2, 3]
+      my_list[0] = 10  # Modifying an element
+      my_list.append(4)  # Adding an element
+      del my_list[1]  # Removing an element
+      
+      my_dict = {'a': 1, 'b': 2}
+      my_dict['a'] = 10  # Modifying a value
+      my_dict['c'] = 3   # Adding a new key-value pair
+      del my_dict['b']   # Removing a key-value pair
+      
+      my_set = {1, 2, 3}
+      my_set.add(4)     # Adding an element
+      my_set.remove(2)  # Removing an element
+
+   Immutable Data Types: Immutable data types, on the other hand, do not allow modifications to the            existing object. Once an immutable object is created, its value cannot be changed. If you need to          modify the value, a new object is created.
+     
+     Tuples are immutable
+     my_tuple = (1, 2, 3)
+    # Attempting to modify is not allowed: my_tuple[0] = 10  # Raises an error
+
+9. Write a code to create the given structure using only for loop.
+     *
+    ***
+   *****
+  *******
+ *********
+
+A. 
+num_rows = 5
+
+for i in range(num_rows):
+    for j in range(num_rows - i - 1):
+        print(" ", end="")
+    for k in range(2 * i + 1):
+        print("*", end="")
+    print()
+
+10.Write a code to create the given structure using while loop.
+    |||||||||
+     |||||||
+      |||||
+       |||
+        |
+
+A. 
+
+num_rows = 5
+current_row = 0
+
+while current_row < num_rows:
+    # Print leading spaces
+    spaces = 0
+    while spaces < current_row:
+        print(" ", end="")
+        spaces += 1
+
+    vertical_lines = 0
+    while vertical_lines < 2 * (num_rows - current_row) - 1:
+        print("|", end="")
+        vertical_lines += 1
+
+    print()
+
+    current_row += 1
+
