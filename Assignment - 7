@@ -1,0 +1,96 @@
+
+
+1. Create two int type variables, apply addition, subtraction, division and              multiplications and store the results in variables. Then print the data in the        following format by calling the
+  variables:
+   First variable is __ & second variable is __.
+   Addition: __ + __ = __
+   Subtraction: __ - __ = __
+   Multiplication: __ * __ = __
+   Division: __ / __ = __
+
+A. 
+  first_variable = 10
+  second_variable = 5
+
+  addition_result = first_variable + second_variable
+  subtraction_result = first_variable - second_variable
+  multiplication_result = first_variable * second_variable
+  division_result = first_variable / second_variable
+
+
+  print(f"First variable is {first_variable} & second variable is {second_variable}.")
+  print(f"Addition: {first_variable} + {second_variable} = {addition_result}")
+  print(f"Subtraction: {first_variable} - {second_variable} = {subtraction_result}")
+  print(f"Multiplication: {first_variable} * {second_variable} = {multiplication_result}")
+  print(f"Division: {first_variable} / {second_variable} = {division_result}")
+
+2. What is the difference between the following operators:
+  (i) ‘/’ & ‘//’
+  (ii) ‘**’ & ‘^’
+  
+A. i.) '/' is the division operator. Returns a floating point result.
+     EX: 5 / 2 => 2.5
+     
+     whereas '//' is floor divison operation. Returns the largest integer less than or equal to the           division of the two numbers.
+     EX: 5 // 2 => 2
+     
+   ii) '**' is the exponential operator which raises a number to a power
+   
+   EX: 2 ** 3 => which means 2 power 3 or 2 cube => 8
+   
+   '^' is the bitwise XOR operator. If corresponding bits of 2 numbers are different it returns 1 else 0
+   
+       0 XOR 0 = 0
+       0 XOR 1 = 1
+       1 XOR 0 = 1
+       1 XOR 1 = 0
+       
+    EX: a = 5  # Binary: 0b0101
+        b = 3  # Binary: 0b0011
+
+      result = a ^ b  # Binary result: 0b0110 => 6
+      
+3.List the logical operators.
+
+A. There are three logical operators.
+   1. and : If both the operands are true it returns true else false.
+   2. or  : If atleasr one operand is true it returns true. It returns false only when both operands are               false
+   3. not : If operand is true it returns false and vice versa.
+   
+   EX: True and True  => True
+       True and Flase => False
+       True or false => True
+       False or False => False
+       
+      not True => False
+      not False => True
+   
+4. Explain right shift operator and left shift operator with examples.
+
+A. Right Shift operator:
+   It shifts the bits of a number to the right by specified positions. Empty bits are filled with sign bit
+   
+   x = 8  
+   result = x >> 1   8 => 1000 -> if we shift by 1 position -> 0100 which is 4
+   result1 = x>>2    8 => 1000 -> if we shift by 2 positions ->0010 which is 2
+   
+   We also have a formula to calculate this : 8 / (2**postions) 
+   
+  Left shift operator : 
+   It shifts the bits of a number to the right by specified positions.
+   
+   x=8
+   result = x << 2  8 => 1000 -> 100000 - which is 32
+   
+   We also have a formula to calculate this : 8 *f (2**postions) 
+   
+5. Create a list containing int type data of length 15. Then write a code to check if 10 is
+   present in the list or not.
+   
+A. 
+    my_list = [2, 5, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65]
+    if 10 in my_list:
+        print("The number 10 is present in the list.")
+    else:
+        print("The number 10 is not present in the list.")
+
